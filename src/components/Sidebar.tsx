@@ -38,7 +38,7 @@ export default function Sidebar() {
           />
           <SidebarLink icon={<BoxIcon />} label="PRODUCTS" to="/products" />
           <SidebarLink icon={<ReceiptIcon />} label="SALES" to="/sales" />
-          <SidebarLink icon={<RefreshIcon />} label="STOCK" to="/stock" />
+          <SidebarLink icon={<RefreshIcon />} label="STOCK" to="/stocks" />
           <SidebarLink icon={<TruckIcon />} label="SUPPLY" to="/suppliers" />
           <SidebarLink icon={<SettingsIcon2 />} label="COSTS" to="/expenses" />
         </nav>
