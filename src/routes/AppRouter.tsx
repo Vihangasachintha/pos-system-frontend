@@ -3,7 +3,7 @@ import { useAuth } from "../context/AuthContext";
 import LoginPage from "../pages/LoginPage";
 import DashboardPage from "../pages/DashboardPage";
 import ProductsPage from "../pages/ProductsPage";
-// import SalesPage from '../pages/SalesPage';
+import SalesPage from '../pages/SalesPage';
 // import StockPage from '../pages/StockPage';
 // import SuppliersPage from '../pages/SuppliersPage';
 // import ExpensesPage from '../pages/ExpensesPage';
@@ -51,6 +51,14 @@ export default function AppRouter() {
           element={
             <ProtectedRoute>
               <ProductsPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/sales"
+          element={
+            <ProtectedRoute>
+              <SalesPage />
             </ProtectedRoute>
           }
         />
