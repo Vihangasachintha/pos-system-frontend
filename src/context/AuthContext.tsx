@@ -34,7 +34,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   });
 
   const login = async (email: string, password: string): Promise<void> => {
-    const response = await api.post('/auth/login', { email, password });
+    const response = await api.post('/login', { email, password });
     const { access_token, user: userData } = response.data;
 
     localStorage.setItem('token', access_token);
@@ -46,7 +46,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const logout = async (): Promise<void> => {
     try {
-      await api.post('/auth/logout');
+      await api.post('/logout');
     } finally {
       localStorage.removeItem('token');
       localStorage.removeItem('user');
