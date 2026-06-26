@@ -5,7 +5,7 @@ import DashboardPage from "../pages/DashboardPage";
 import ProductsPage from "../pages/ProductsPage";
 import SalesPage from '../pages/SalesPage';
 import StockPage from '../pages/StockMovements';
-// import SuppliersPage from '../pages/SuppliersPage';
+import SuppliersPage from '../pages/SupplyPage';
 // import ExpensesPage from '../pages/ExpensesPage';
 
 // Wrapper that blocks unauthenticated users
@@ -67,6 +67,14 @@ export default function AppRouter() {
           element={
             <ProtectedRoute>
               <StockPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/suppliers"
+          element={
+            <ProtectedRoute>
+              < SuppliersPage/>
             </ProtectedRoute>
           }
         />
