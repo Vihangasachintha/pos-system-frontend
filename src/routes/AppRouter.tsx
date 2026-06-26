@@ -4,7 +4,7 @@ import LoginPage from "../pages/LoginPage";
 import DashboardPage from "../pages/DashboardPage";
 import ProductsPage from "../pages/ProductsPage";
 import SalesPage from '../pages/SalesPage';
-// import StockPage from '../pages/StockPage';
+import StockPage from '../pages/StockMovements';
 // import SuppliersPage from '../pages/SuppliersPage';
 // import ExpensesPage from '../pages/ExpensesPage';
 
@@ -59,6 +59,14 @@ export default function AppRouter() {
           element={
             <ProtectedRoute>
               <SalesPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/stocks"
+          element={
+            <ProtectedRoute>
+              <StockPage />
             </ProtectedRoute>
           }
         />
