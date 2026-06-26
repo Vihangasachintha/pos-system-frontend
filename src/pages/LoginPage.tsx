@@ -47,7 +47,7 @@ export default function LoginPage() {
       </div>
 
       {/* Login Card */}
-      <div className="w-full max-w-[440px] overflow-hidden rounded-[28px] bg-white border border-[#E5E9D5] shadow-lg shadow-[#1c2415/0.03]">
+      <div className="w-full max-w-110 overflow-hidden rounded-[28px] bg-white border border-[#E5E9D5] shadow-lg shadow-[#1c2415/0.03]">
         {/* Accent Top Bar */}
         <div className="h-2 bg-[#4D6636]"></div>
 
