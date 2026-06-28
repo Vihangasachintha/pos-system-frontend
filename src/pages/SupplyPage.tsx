@@ -78,9 +78,9 @@ export default function SuppliersPage() {
         {/* TOP LEVEL NAVIGATION & UTILITIES SEARCH CONTEXT HEADER */}
         <header className="h-20 border-b border-[#E5E9D5] px-8 flex items-center justify-between bg-[#F7F9EE]/50 backdrop-blur-sm sticky top-0 z-20">
           <div className="flex items-center gap-2">
-            <h1 className="text-sm font-black text-[#1E2516]">Suppliers</h1>
-            <span className="text-xs text-[#BAC29E]">|</span>
-            <span className="text-[11px] font-bold text-[#7C8465]">
+            <h1 className="text-xl font-bold tracking-tight text-[#1E2516]">Suppliers</h1>
+            <span className="text-xl text-[#BAC29E]">|</span>
+            <span className="text-xl font-bold tracking-tight text-[#7C8465]">
               Admin Terminal
             </span>
           </div>
