@@ -5,15 +5,18 @@ export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const { login } = useAuth();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setError(null);
     try {
       await login(email, password);
       // login() saves token + user to state and localStorage
       // AppRouter will automatically redirect to /dashboard
-    } catch (error) {
+    } catch (error: any) {
+      setError(error.response?.data?.message || "Invalid email or password.");
       console.error("Login failed:", error);
       // You can add an error state here later to show a message to the user
     }
@@ -47,7 +50,7 @@ export default function LoginPage() {
       </div>
 
       {/* Login Card */}
-      <div className="w-full max-w-[440px] overflow-hidden rounded-[28px] bg-white border border-[#E5E9D5] shadow-lg shadow-[#1c2415/0.03]">
+      <div className="w-full max-w-110 overflow-hidden rounded-[28px] bg-white border border-[#E5E9D5] shadow-lg shadow-[#1c2415/0.03]">
         {/* Accent Top Bar */}
         <div className="h-2 bg-[#4D6636]"></div>
 
@@ -147,6 +150,13 @@ export default function LoginPage() {
               </button>
             </div>
           </div>
+
+          {/* Error Message */}
+          {error && (
+            <div className="mb-4 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-medium text-red-600">
+              {error}
+            </div>
+          )}
 
           {/* Action Button */}
           <button

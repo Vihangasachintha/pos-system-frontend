@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+@layer utilities {
+  .clip-path-progress {
+    clip-path: polygon(50% 50%, 50% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 15%, 50% 50%);
+  }
+}
