@@ -6,7 +6,7 @@ import ProductsPage from "../pages/ProductsPage";
 import SalesPage from '../pages/SalesPage';
 import StockPage from '../pages/StockMovements';
 import SuppliersPage from '../pages/SupplyPage';
-// import ExpensesPage from '../pages/ExpensesPage';
+import ExpensesPage from '../pages/ExpensePage';
 
 // Wrapper that blocks unauthenticated users
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
@@ -75,6 +75,14 @@ export default function AppRouter() {
           element={
             <ProtectedRoute>
               < SuppliersPage/>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/expenses"
+          element={
+            <ProtectedRoute>
+              < ExpensesPage/>
             </ProtectedRoute>
           }
         />
